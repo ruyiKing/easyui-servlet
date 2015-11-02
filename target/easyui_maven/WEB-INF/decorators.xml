@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/jsp">
+	<!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <!--<excludes>
+        <pattern>/about.jsp</pattern>
+    </excludes>-->
+	
+	<decorator name="main-layout" page="AddForm.jsp">
+	<!--<decorator name="main-layout" page="index.jsp">-->
+        <pattern>/*</pattern>
+    </decorator>	
+</decorators>
