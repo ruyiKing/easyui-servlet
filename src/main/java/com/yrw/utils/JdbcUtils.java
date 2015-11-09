@@ -5,6 +5,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author fate
+ * @URL  http://blog.csdn.net/yanzi1225627/article/details/26950615
+ */
 public class JdbcUtils {
 	 //数据库用户名  
     private static final String USERNAME = "king01";  
