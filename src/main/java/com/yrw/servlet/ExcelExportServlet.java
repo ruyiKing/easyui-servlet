@@ -28,6 +28,7 @@ public class ExcelExportServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private HSSFWorkbook workbook;
 	//访问网址：http://localhost:8080/excelExport/servlet/ExcelExportServlet  
     public void doGet(HttpServletRequest request, HttpServletResponse response)  
             throws ServletException, IOException {  
@@ -81,9 +82,8 @@ public class ExcelExportServlet extends HttpServlet {
      * @Auther: lujinyong 
      * @Date: 2013-8-22 下午3:05:49 
      */  
-    protected void exportExcel(String title,String[] headers,List mapList,OutputStream out,String pattern){  
-        //声明一个工作簿  
-        HSSFWorkbook workbook = new HSSFWorkbook();  
+    protected void exportExcel(String title,String[] headers,List<?> mapList,OutputStream out,String pattern){  
+        workbook = new HSSFWorkbook();  
         //生成一个表格  
         HSSFSheet sheet = workbook.createSheet(title);  
         //设置表格默认列宽度为15个字符  
@@ -128,7 +128,9 @@ public class ExcelExportServlet extends HttpServlet {
             cell.setCellValue(text);  
         }  
         for (int i=0;i<mapList.size();i++) {  
-            Map<String,Object> map = (Map<String, Object>) mapList.get(i);  
+            @SuppressWarnings("unchecked")
+			Map<String, Object> map2 = (Map<String, Object>) mapList.get(i);
+			Map<String,Object> map = map2;  
             row = sheet.createRow(i+1);  
             int j = 0;  
             Object value = null;  

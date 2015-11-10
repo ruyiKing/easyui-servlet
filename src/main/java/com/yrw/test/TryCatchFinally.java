@@ -4,7 +4,7 @@ public class TryCatchFinally {
     @SuppressWarnings("finally")
     public static final String test() {
         String t = "";
-        int a=5,b=0;
+        //int a=5,b=0;
         try {
         	//int c = a/b;
             t = "try";

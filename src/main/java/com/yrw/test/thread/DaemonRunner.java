@@ -7,7 +7,9 @@ import java.util.Scanner;
  */
 
 public class DaemonRunner implements Runnable {
-    public  void run(){
+    private static Scanner scanner;
+
+	public  void run(){
         while (true){
             for(int i=0;i<=3;i++){
                 System.out.println("守护线程:"+i);
@@ -25,7 +27,7 @@ public class DaemonRunner implements Runnable {
         daemonRunner.setDaemon(true);
         daemonRunner.start();
         System.out.println("isDaemon = " + daemonRunner.isDaemon());
-        Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
         scanner.next();
 
         Runtime.getRuntime().addShutdownHook(new Thread(){

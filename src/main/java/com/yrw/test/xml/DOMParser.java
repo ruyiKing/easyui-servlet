@@ -44,6 +44,7 @@ import org.xml.sax.SAXException;
          { 
             Node node = nodes.item(i); 
             if (node.getNodeType() == Node.ELEMENT_NODE) {   
+               @SuppressWarnings("unused")
                Element child = (Element) node; 
                //process child element 
             } 
