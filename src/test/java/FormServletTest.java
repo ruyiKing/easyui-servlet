@@ -16,13 +16,12 @@ import com.yrw.servlet.FormServlet;
  * Created by fate on 2015/9/10.
  */
 public class FormServletTest {
-	 private FormServlet servlet;
-	    private HttpServletRequest mockRequest;
+	 private HttpServletRequest mockRequest;
 	    private HttpServletResponse mockResponse;
 
 	    @Before
 	    public void setUp(){
-	        servlet = new FormServlet();
+	        new FormServlet();
 
 	        mockRequest = EasyMock.createMock(HttpServletRequest.class);         //加载
 	        mockResponse = EasyMock.createMock(HttpServletResponse.class);

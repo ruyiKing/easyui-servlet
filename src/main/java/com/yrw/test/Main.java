@@ -10,6 +10,6 @@ public class Main {
 }
 
 class MainPerson {
-	public static String name = "ÕÅÈı";
+	public static String name = "å¼ ä¸‰";
 	static int age = 21;
 }
