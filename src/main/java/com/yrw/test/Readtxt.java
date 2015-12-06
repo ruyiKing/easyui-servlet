@@ -3,12 +3,8 @@ package com.yrw.test;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,6 +12,11 @@ import java.util.Map;
 import java.util.TreeSet;
 
 
+/**
+ * @author Frankie
+ * @URL http://www.cnblogs.com/hnlshzx/p/3496631.html
+ * 		http://blog.csdn.net/zhaoqianjava/article/details/6858427#t4
+ */
 public class Readtxt {
 
 	public static void main(String[] args) throws IOException {
@@ -56,8 +57,9 @@ public class Readtxt {
 		}
 	}
 	
-	private static void sortResults(Map results) {
-		TreeSet sortedResults = new TreeSet(new Comparator(){
+	private static void sortResults(Map<String, Integer> results) {
+		TreeSet<User> sortedResults = new TreeSet<User>(new Comparator<Object>(){
+			@Override
 			public int compare (Object o1, Object o2) {
 				User user1 = (User)o1;
 				User user2 = (User)o2;
@@ -73,7 +75,7 @@ public class Readtxt {
 				 }
 			}
 		});
-		Iterator iterator =results.keySet().iterator();
+		Iterator<String> iterator =results.keySet().iterator();
 		while(iterator.hasNext()){
 			 String name = (String)iterator.next();
 			 Integer value =(Integer)results.get(name);
@@ -85,8 +87,8 @@ public class Readtxt {
 		printResults(sortedResults);
 	}
 	
-	private static void printResults(TreeSet sortedResults) {
-		Iterator iterator = sortedResults.iterator();
+	private static void printResults(TreeSet<User> sortedResults) {
+		Iterator<User> iterator = sortedResults.iterator();
 		while (iterator.hasNext()) {
 			User user = (User) iterator.next();
 			System.out.println(user.name + ":" + user.value);
