@@ -11,7 +11,7 @@ public class TestStr {
 		String[] arr = str.split(",");
 		List<String> l = Arrays.asList(arr);
 		Integer.parseInt(l.get(0));*/
-		
+	
 		String sourceStr="2015313213213.png";
 		String[] sourceStrArray = sourceStr.split("\\.");
         for (int i = 0; i < sourceStrArray.length; i++) {
