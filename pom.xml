@@ -14,6 +14,7 @@
 		<org.springframework.security-version>4.2.2.RELEASE</org.springframework.security-version>
 		<org.aspectj-version>1.8.1</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
+		<org.apache.poi>3.13</org.apache.poi>
 	</properties>
 
 	<dependencies>
@@ -111,10 +112,22 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.12</version>
+			<version>${org.apache.poi}</version>
 		</dependency>
-		
-		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${org.apache.poi}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>${org.apache.poi}</version>
+		</dependency>
+
+
+
+
 
 	</dependencies>
 
