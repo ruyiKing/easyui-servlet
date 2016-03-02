@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>测试</title>
+ 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+ 
+    <script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+		
+		  $("#errMsgOther").change(function(){
+            alert("asdf");
+            $("input[name='errMsg2']").attr("checked",false);
+            $("input[name='errMsg3']").attr("checked",false);
+        });
+		  
+	});
+    </script>
+ 
+</head>
+<body>
+    
+	  <tr>
+                <td align="center">手持身份证半身照</td>
+                <td>
+                    <input type="radio" name="errMsg2" value="身份证的照片与持证人不一致-2"/> <span>&nbsp身份证的照片与持证人不一致</span> <br>
+                    <input type="radio" name="errMsg2" value="手持身份证上面的照片不清晰-2"/> <span>&nbsp手持身份证上面的照片不清晰</span> <br>
+                    <input type="radio" name="errMsg2" value="身份证内容与法人注册内容不一致-2"/> <span>&nbsp身份证内容与法人注册内容不一致</span> <br>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">账户信息</td>
+                <td >
+                    <input type="radio" name="errMsg3" value="银行卡正反面照片不清晰-3"/> <span>&nbsp银行卡正反面照片不清晰</span> <br>
+                    <input type="radio" name="errMsg3" value="注册银行卡号与上传银行卡号不符-3"/> <span>&nbsp注册银行卡号与上传银行卡号不符</span> <br>
+                    <input type="radio" name="errMsg3" value="银行卡账户名称与身份证名称不符-3"/> <span>&nbsp银行卡账户名称与身份证名称不符</span> <br>
+                    <input type="radio" name="errMsg3" value="注册开户行名称与上传银行卡正面照片开户行不符-3"/> <span>&nbsp注册开户行名称与上传银行卡正面照片开户行不符</span> <br>
+                    <input type="radio" name="errMsg3" value="上传证件内容不符合要求-3"/> <span>&nbsp上传证件内容不符合要求</span> <br>
+                    <input type="radio" name="errMsg3" value="升级APP，重新上传账户信息-3"/> <span>&nbsp升级APP，重新上传账户信息</span> <br>
+
+                </td>
+            </tr>
+	  </tr>
+	  
+	  <tr>
+                <td  align="center">
+                    <input type="radio" name="errMsg" id="errMsgOther" value="1"/> <span>&nbsp其他</span> <br>
+                </td>
+                <td>
+                    <input type="text"  name="errMsg3" id="myErrMsg1" value="手持身份证半身照原因"
+                           onfocus="if(value=='手持身份证半身照原因')  {value=''}" onblur="if (value=='') {value='手持身份证半身照原因'}"  />  <br>
+                    <input type="text"  name="errMsg3" id="myErrMsg2" value="账户信息原因"
+                           onfocus="if(value=='账户信息原因')  {value=''}" onblur="if (value=='') {value='账户信息原因'}" />  <br>
+
+                    <br></td>
+      </tr>
+	  
+</body>
+</html>
