@@ -1,14 +1,14 @@
 package com.yrw.test;
 public class TestFinal3 { 
         @SuppressWarnings("unused")
-		private final String S = "finalÊµÀı±äÁ¿S"; 
+		private final String S = "finalå®ä¾‹å˜é‡S"; 
         private final int A = 100; 
         public final int B = 90; 
 
         public static final int C = 80; 
         private static final int D = 70; 
 
-        public final int E; //final¿Õ°×,±ØĞëÔÚ³õÊ¼»¯¶ÔÏóµÄÊ±ºò¸³³õÖµ 
+        public final int E; //finalç©ºç™½,å¿…é¡»åœ¨åˆå§‹åŒ–å¯¹è±¡çš„æ—¶å€™èµ‹åˆå€¼ 
 
         public TestFinal3(int x) { 
                 E = x; 
@@ -20,22 +20,22 @@ public class TestFinal3 {
         @SuppressWarnings("static-access")
 		public static void main(String[] args) { 
                 TestFinal3 t = new TestFinal3(2); 
-                //t.A=101;    //³ö´í,final±äÁ¿µÄÖµÒ»µ©¸ø¶¨¾ÍÎŞ·¨¸Ä±ä 
-                //t.B=91; //³ö´í,final±äÁ¿µÄÖµÒ»µ©¸ø¶¨¾ÍÎŞ·¨¸Ä±ä 
-                //t.C=81; //³ö´í,final±äÁ¿µÄÖµÒ»µ©¸ø¶¨¾ÍÎŞ·¨¸Ä±ä 
-                //t.D=71; //³ö´í,final±äÁ¿µÄÖµÒ»µ©¸ø¶¨¾ÍÎŞ·¨¸Ä±ä 
+                //t.A=101;    //å‡ºé”™,finalå˜é‡çš„å€¼ä¸€æ—¦ç»™å®šå°±æ— æ³•æ”¹å˜ 
+                //t.B=91; //å‡ºé”™,finalå˜é‡çš„å€¼ä¸€æ—¦ç»™å®šå°±æ— æ³•æ”¹å˜ 
+                //t.C=81; //å‡ºé”™,finalå˜é‡çš„å€¼ä¸€æ—¦ç»™å®šå°±æ— æ³•æ”¹å˜ 
+                //t.D=71; //å‡ºé”™,finalå˜é‡çš„å€¼ä¸€æ—¦ç»™å®šå°±æ— æ³•æ”¹å˜ 
 
                 System.out.println(t.A); 
                 System.out.println(t.B); 
-                System.out.println(t.C); //²»ÍÆ¼öÓÃ¶ÔÏó·½Ê½·ÃÎÊ¾²Ì¬×Ö¶Î 
-                System.out.println(t.D); //²»ÍÆ¼öÓÃ¶ÔÏó·½Ê½·ÃÎÊ¾²Ì¬×Ö¶Î 
+                System.out.println(t.C); //ä¸æ¨èç”¨å¯¹è±¡æ–¹å¼è®¿é—®é™æ€å­—æ®µ 
+                System.out.println(t.D); //ä¸æ¨èç”¨å¯¹è±¡æ–¹å¼è®¿é—®é™æ€å­—æ®µ 
                 System.out.println(TestFinal3.C); 
                 System.out.println(TestFinal3.D); 
-                //System.out.println(Test3.E); //³ö´í,ÒòÎªEÎªfinal¿Õ°×,ÒÀ¾İ²»Í¬¶ÔÏóÖµÓĞËù²»Í¬. 
+                //System.out.println(Test3.E); //å‡ºé”™,å› ä¸ºEä¸ºfinalç©ºç™½,ä¾æ®ä¸åŒå¯¹è±¡å€¼æœ‰æ‰€ä¸åŒ. 
                 System.out.println(t.E); 
 
                 TestFinal3 t1 = new TestFinal3(3); 
-                System.out.println(t1.E); //final¿Õ°×±äÁ¿EÒÀ¾İ¶ÔÏóµÄ²»Í¬¶ø²»Í¬ 
+                System.out.println(t1.E); //finalç©ºç™½å˜é‡Eä¾æ®å¯¹è±¡çš„ä¸åŒè€Œä¸åŒ 
                 
         } 
 
@@ -48,11 +48,11 @@ public class TestFinal3 {
 
         @SuppressWarnings("unused")
 		public void test2() { 
-                final int a;     //final¿Õ°×,ÔÚĞèÒªµÄÊ±ºò²Å¸³Öµ 
-                final int b = 4;    //¾Ö²¿³£Á¿--finalÓÃÓÚ¾Ö²¿±äÁ¿µÄÇéĞÎ 
-                final int c;    //final¿Õ°×,Ò»Ö±Ã»ÓĞ¸ø¸³Öµ.    
+                final int a;     //finalç©ºç™½,åœ¨éœ€è¦çš„æ—¶å€™æ‰èµ‹å€¼ 
+                final int b = 4;    //å±€éƒ¨å¸¸é‡--finalç”¨äºå±€éƒ¨å˜é‡çš„æƒ…å½¢ 
+                final int c;    //finalç©ºç™½,ä¸€ç›´æ²¡æœ‰ç»™èµ‹å€¼.    
                 a = 3; 
-                //a=4;    ³ö´í,ÒÑ¾­¸ø¸³¹ıÖµÁË. 
-                //b=2; ³ö´í,ÒÑ¾­¸ø¸³¹ıÖµÁË. 
+                //a=4;    å‡ºé”™,å·²ç»ç»™èµ‹è¿‡å€¼äº†. 
+                //b=2; å‡ºé”™,å·²ç»ç»™èµ‹è¿‡å€¼äº†. 
         } 
 }
