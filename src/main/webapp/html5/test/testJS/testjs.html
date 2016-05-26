@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="/js/jquery-1.12.1.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript">
+	   $(document).ready(function(){
+		  $("#title-div").click(function(){
+			$(this).hide();
+		  });
+		  $("#title-area").click(function(){
+			alert($("#title-area").length)
+		  });
+		});
+	</script> 
+
+  </head>
+  
+  <html>
+	<body>
+
+	<div style="float:left">
+		<table border="1">
+		<tr>
+			<textarea id="title-area" name="title-area" placeholder="请在这里概述您的问题"></textarea>
+			<span id="title-count" class="count"><b>0</b>/49</span>
+			<br><div id="title-div">
+				<font size="2" color="FireBrick">您输入的字体个数超出49个字</font>
+			</div>
+		</tr>
+		
+			
+		
+		
+
+		</table>
+	</div>
+
+	</body>
+
+</html>

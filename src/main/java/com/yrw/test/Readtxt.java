@@ -23,7 +23,7 @@ public class Readtxt {
 		//InputStream iStream = Readtxt.class.getResourceAsStream("/com/yrw/test/info.txt");
 		//BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(iStream,"utf-8"));  
 		//BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(iStream,"GBK"));
-		String pathname ="C:\\Users\\Frankie\\Desktop\\info.txt";
+		String pathname ="C:\\Users\\fate\\Desktop\\info.txt";
 		File file = new File(pathname);
 		FileInputStream fileInputStream =new FileInputStream(file);
 		InputStreamReader isr = new InputStreamReader(fileInputStream, "gbk");

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript">
+	   　var name = "The Window";   
+		 var object = {   
+		　　　　name : "My Object",   
+		　　　　getNameFunc : function(){   
+		　　　　　　return function(){   
+		　　　　　　　　return this.name;   
+		　　　　　};   
+		　　　　}   
+		};   
+		alert(object.getNameFunc()()); 
+		
+		/**
+		var name="The Window";
+		var object={
+			  name : "My Object",
+			  getNameFunc : function()
+			  {
+						 var that = this;
+					  return function()
+					  {
+								return that.name;
+					   }
+			  }
+		}
+		alert(object.getNameFunc()());
+		
+		
+		javascript是动态（或者动态类型）语言，this关键字在执行的时候才能确定是谁。所以this永远指向调用者，即对‘调用对象‘者的引用。第一部分通过代码：object.getNameFunc()调用返回一个函数。这是个返回的函数，它不在是object的属性或者方法，此时调用者是window。因此输出是 The Window
+		第二部分，当执行函数object.getNameFunc()后返回的是：
+		function()
+					  {
+								return that.name;
+					   }
+		此时的that=this。而this指向object，所以that指向object。无论你执行多少次，他都是对object的引用，所以输出My Object
+		*/
+	</script> 
+
+  </head>
+  
+  <html>
+	<body>
+
+	
+
+	</body>
+
+</html>

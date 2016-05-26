@@ -14,6 +14,7 @@
 		<org.springframework.security-version>4.2.2.RELEASE</org.springframework.security-version>
 		<org.aspectj-version>1.8.1</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
+		<org.apache.poi>3.13</org.apache.poi>
 	</properties>
 
 	<dependencies>
@@ -30,6 +31,13 @@
             <artifactId>easymock</artifactId>
             <version>3.4</version>
         </dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
 
 		<!-- json-lib ( Dependencies ) begin -->
 		<dependency>
@@ -111,10 +119,29 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.12</version>
+			<version>${org.apache.poi}</version>
 		</dependency>
-		
-		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${org.apache.poi}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>${org.apache.poi}</version>
+		</dependency>
+
+		<!-- httpclient - http借口调用 -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.1</version>
+		</dependency>
+
+
+
+
 
 	</dependencies>
 

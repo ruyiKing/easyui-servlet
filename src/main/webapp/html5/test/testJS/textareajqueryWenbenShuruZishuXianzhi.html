@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+    <script type="text/javascript" src="/js/jquery-1.12.1.js"></script>
+
+    <script type="text/javascript" language="javascript">
+        $(function() {
+            $("#content").keyup(check);
+            $("body").mousedown(check);
+        });
+
+        function check() {
+            var str = $("#content").val();
+            var len = strlen(str);
+            var info = 14 - len;
+            info = info + "";
+            if (info.indexOf('.') > 0)
+                info = info.substring(0, info.indexOf('.'));
+            if (len <= 14) {
+                $("#info1").html("还能输入");
+                $("#info").css('color', 'gray');
+                $("#info").html(info);
+            } else {
+                info = info.substr(1)
+                $("#info1").html("超过");
+                $("#info").css('color', 'red');
+                $("#info").html(info);
+            }
+        }
+
+        function trim(str) {
+            return (str + '').replace(/(\s+)$/g, '').replace(/^\s+/g, '');
+        }
+
+        function strlen(str) {
+            var str = trim(str);
+            var len = 0;
+            for (var i = 0; i < str.length; i++) {
+                len += str.charCodeAt(i) > 0 && str.charCodeAt(i) < 255 ? 0.5 : 1;
+            }
+            return len;
+        }
+    </script>
+
+</head>
+<body>
+<form>
+    <table border="0" cellpadding="0" cellspacing="0" width="500px;">
+        <tr>
+            <td align="right">
+                <textarea id="content" cols="50" rows="10" style="overflow: auto;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <div style="vertical-align: bottom; height: 20px; line-height: 20px; margin: 0px;
+                    color: Gray;">
+                    <label id="info2" style="float: right; font-size: 12px;">
+                        个字</label>
+                    <span id="info" style="float: right; font-size: 20px; font-weight: bold;">14</span><label
+                        id="info1" style="float: right; font-size: 12px;">
+                    还能输入</label></div>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
