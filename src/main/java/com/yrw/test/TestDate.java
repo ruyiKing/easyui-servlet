@@ -24,6 +24,8 @@ public class TestDate {
 		System.out.println("年份为："+str1);
 		System.out.println("月份为："+str2);
 		System.out.println("日为："+str3);
+		String dString = new SimpleDateFormat("yyMMddhhmmssS").format(new Date());
+		System.out.println(dString);
 	}
 
 }
