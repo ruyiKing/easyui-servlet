@@ -1,7 +1,6 @@
 package com.yrw.test.string;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,6 +27,27 @@ public class TestStr {
 //        System.out.println(dd.matches("\\d{4}-(0[1-9]|1[0-2])"));
         
         System.out.println(Double.parseDouble(d));
+        
+        
+        StringBuffer stringBuffer = new StringBuffer();
+        Date beginDate = new Date();
+        System.out.println("=========begin:" + beginDate.getTime());
+        for (long i=0;i<100000000;i++){
+            stringBuffer.append("s1111111111");
+        }
+        Date endDate = new Date();
+        System.out.println("=========end:" + endDate.getTime());
+        System.out.println("用时：" + (endDate.getTime() - beginDate.getTime()));
+
+        StringBuilder stringBuilder = new StringBuilder();
+        beginDate = new Date();
+        System.out.println("=========begin:" + beginDate.getTime());
+        for (long i=0;i<100000000;i++){
+            stringBuilder.append("s1111111111");
+        }
+        endDate = new Date();
+        System.out.println("=========end:" + endDate.getTime());
+        System.out.println("用时：" + (endDate.getTime() - beginDate.getTime()));
 	}
 
 }

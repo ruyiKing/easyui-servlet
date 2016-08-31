@@ -9,12 +9,19 @@ public class Test {
 	
 	  public static void main(String[] args) throws ParseException {
 		  Calendar calendar = Calendar.getInstance();
-		  String stime="2015-10-18 17:50:23";
+		  String stime="2025-10-18 17:50:23";
 		  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		  Date date = sdf.parse(stime);
 		  System.out.println(date);
 		  calendar.setTime(date);
 		  System.out.println(calendar.get(Calendar.MINUTE));
+		  
+		  Date d=new Date();
+		  System.out.println(d);
+		  System.out.println(d.getTime());
+		  System.out.println(date.getTime());
+		  String str=date.getTime()+"";
+		  System.out.println(str.substring(1, str.length()));
 	  }
 	
 //    public void getTimeByDate(){

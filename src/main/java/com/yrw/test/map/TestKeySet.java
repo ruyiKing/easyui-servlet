@@ -21,6 +21,7 @@ public class TestKeySet {
 		System.out.println(key1==key2);
 		System.out.println(key1==key3);
 		
+		System.out.println(map.get("1"));
 		
 	}
 
