@@ -5,7 +5,7 @@ import javax.mail.MessagingException;
 public class TestSentMail {
 
 	public static void main(String[] args)  {
-		
+
 		SendMail mail = new SendMail();
 		try {
 			mail.sendEmail("对象","能看见吗");
@@ -15,6 +15,6 @@ public class TestSentMail {
 		}
 
 	}
-	
+
 
 }
