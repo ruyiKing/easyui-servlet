@@ -1,0 +1,41 @@
+package com.yrw.test.thread;
+
+import java.util.concurrent.TimeUnit;
+
+/**
+ * 线程优先级：
+ 每个线程都有一个优先级。优先级高的线程获取CPU资源的概率较大，优先级低的并非没机会执行（优先级低的也可能会被执行）。线程的优先级用1-10之间的整数表示，数值越大优先级越高，默认的优先级为5
+ */
+public class ThreadPriorityExample {
+    public static void main(String[] args) {
+        MyThread thread = new MyThread();
+        thread.setName("thread 1");
+        thread.setPriority(Thread.MIN_PRIORITY);
+        thread.start();
+
+        Thread thread2 = new MyThread();
+        thread2.setName("thread 2");
+        thread2.setPriority(Thread.MAX_PRIORITY);
+        thread2.start();
+    }
+
+    private static class MyThread extends Thread {
+        private int c;
+
+        @Override
+        public void run() {
+            String threadName = Thread.currentThread().getName();
+
+            System.out.println(threadName + " started.");
+            for (int i = 0; i < 1000; i++) {
+                c++;
+                try {
+                    TimeUnit.MICROSECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println(threadName + " ended.");
+        }
+    }
+}
