@@ -8,20 +8,31 @@ import java.util.Date;
 public class Test {
 	
 	  public static void main(String[] args) throws ParseException {
-		  Calendar calendar = Calendar.getInstance();
-		  String stime="2025-10-18 17:50:23";
-		  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		  Date date = sdf.parse(stime);
-		  System.out.println(date);
-		  calendar.setTime(date);
-		  System.out.println(calendar.get(Calendar.MINUTE));
+
+	  Long l1 = new Long(1);
+	  Long l2 = new Long(1);
+
+		  System.out.println(l2==1);
+
+	  	/*Calendar calendar = Calendar.getInstance();
+		  SimpleDateFormat sdf = new SimpleDateFormat("yyyyMM");
+		 calendar.add(Calendar.MONTH,-1);
+		  System.out.println(sdf.format(calendar.getTime()));*/
+
+/*//		  Calendar calendar = Calendar.getInstance();
+//		  String stime="2025-10-18 17:50:23";
+//		  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		  Date date = sdf.parse(stime);
+//		  System.out.println(date);
+//		  calendar.setTime(date);
+//		  System.out.println(calendar.get(Calendar.MINUTE));*/
 		  
-		  Date d=new Date();
+		/*  Date d=new Date();
 		  System.out.println(d);
 		  System.out.println(d.getTime());
 		  System.out.println(date.getTime());
 		  String str=date.getTime()+"";
-		  System.out.println(str.substring(1, str.length()));
+		  System.out.println(str.substring(1, str.length()));*/
 	  }
 	
 //    public void getTimeByDate(){
